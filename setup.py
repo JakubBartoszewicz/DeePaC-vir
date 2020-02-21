@@ -32,7 +32,7 @@ setup(name='deepacvir',
           'numpy>=1.18.1',
       ],
       entry_points={
-          'console_scripts': ['deepacvir-vir=deepacvir.command_line:main'],
+          'console_scripts': ['deepac-vir=deepacvir.command_line:main'],
       },
       include_package_data=True,
       zip_safe=False)
