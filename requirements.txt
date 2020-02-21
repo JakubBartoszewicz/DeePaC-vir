@@ -1,0 +1,4 @@
+deepac==0.10.1
+numpy==1.18.1
+scikit-learn==0.22.1
+tensorboard==1.15.0
