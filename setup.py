@@ -26,7 +26,7 @@ setup(name='deepacvir',
       packages=['deepacvir'],
       python_requires='>=3',
       install_requires=[
-          'deepacvir>=0.10.1',
+          'deepac>=0.10.1',
           'tensorflow==1.15',
           'scikit-learn>=0.22.1',
           'numpy>=1.18.1',
