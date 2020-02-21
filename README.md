@@ -34,7 +34,7 @@ source my_env/bin/activate
 
 
 ### With conda (recommended)
- [![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/deepac/README.html)
+ [![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/deepacvir/README.html)
  
 You can install DeePaC-vir with `bioconda`. Set up the [bioconda channel](
 <https://bioconda.github.io/user/install.html#set-up-channels>) first, and then:
