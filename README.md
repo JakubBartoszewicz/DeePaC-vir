@@ -59,7 +59,7 @@ conda remove tensorflow
 conda install -c defaults tensorflow-gpu 
 conda install deepacvir
 ```
-DeePaC will be installed automatically. Note: TensorFlow 2.0 is not yet supported.
+DeePaC will be installed automatically.
 
 If you're using `pip`, you need to install CUDA and CuDNN first (see TensorFlow installation guide for details). Then
 you can do the same as above:

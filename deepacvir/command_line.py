@@ -4,7 +4,7 @@ A DeePaC CLI. Support subcommands, prediction with built-in and custom models, t
 """
 import sklearn # to load libgomp early to solve problems with static TLS on some systems like bioconda mulled-tests
 import numpy as np
-import tensorflow.compat.v1 as tf
+import tensorflow as tf
 import random as rn
 import os
 from deepacvir import __file__
@@ -17,9 +17,8 @@ def main():
     """Run DeePaC-vir CLI."""
     seed = 0
     np.random.seed(seed)
-    tf.set_random_seed(seed)
+    tf.random.set_seed(seed)
     rn.seed(seed)
-    tf.disable_v2_behavior()
     modulepath = os.path.dirname(__file__)
     print("DeePaC-vir {}. Using viral models.".format(__version__))
     builtin_configs = {"rapid": os.path.join(modulepath, "builtin", "config", "nn-vhdb-rapid-cnn.ini"),
