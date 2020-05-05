@@ -22,7 +22,7 @@ Documentation can be found here:
 
 We recomment setting up an isolated `conda` environment:
 ```
-conda create -n my_env python=3.6
+conda create -n my_env
 conda activate my_env
 ```
 
@@ -50,14 +50,13 @@ You can also install DeePaC-vir with `pip`:
 ```
 pip install deepacvir
 ```
-Note: TensorFlow 2.0 is not yet supported.
 
 ### GPU support
 
 To use GPUs, you need to install the GPU version of TensorFlow. In conda, install tensorflow-gpu from the `defaults` channel before deepac:
 ```
 conda remove tensorflow
-conda install -c defaults tensorflow-gpu=1.15 
+conda install -c defaults tensorflow-gpu 
 conda install deepacvir
 ```
 DeePaC will be installed automatically. Note: TensorFlow 2.0 is not yet supported.
@@ -66,7 +65,7 @@ If you're using `pip`, you need to install CUDA and CuDNN first (see TensorFlow 
 you can do the same as above:
 ```
 pip uninstall tensorflow
-pip install tensorflow-gpu==1.15
+pip install tensorflow-gpu
 ```
 
 ## Usage
