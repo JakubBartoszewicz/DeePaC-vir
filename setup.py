@@ -7,7 +7,7 @@ def readme():
 
 
 setup(name='deepacvir',
-      version='0.2.0',
+      version='0.2.1',
       description='Detecting novel human viruses from DNA reads with reverse-complement neural networks.',
       long_description=readme(),
       long_description_content_type='text/markdown',
@@ -30,7 +30,7 @@ setup(name='deepacvir',
           'deepac>=0.11.0',
           'tensorflow>=2.1',
           'scikit-learn>=0.22.1',
-          'numpy>=1.18.1',
+          'numpy>=1.17',
       ],
       entry_points={
           'console_scripts': ['deepac-vir=deepacvir.command_line:main'],
