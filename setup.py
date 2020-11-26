@@ -7,7 +7,7 @@ def readme():
 
 
 setup(name='deepacvir',
-      version='0.2.1',
+      version='0.2.2',
       description='Detecting novel human viruses from DNA reads with reverse-complement neural networks.',
       long_description=readme(),
       long_description_content_type='text/markdown',
