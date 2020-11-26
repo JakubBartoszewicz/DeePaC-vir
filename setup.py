@@ -31,6 +31,7 @@ setup(name='deepacvir',
           'tensorflow>=2.1',
           'scikit-learn>=0.22.1',
           'numpy>=1.17',
+          'matplotlib>=3.1.3',
       ],
       entry_points={
           'console_scripts': ['deepac-vir=deepacvir.command_line:main'],

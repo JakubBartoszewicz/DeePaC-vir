@@ -3,6 +3,7 @@ A DeePaC CLI. Support subcommands, prediction with built-in and custom models, t
 
 """
 import sklearn # to load libgomp early to solve problems with static TLS on some systems like bioconda mulled-tests
+import matplotlib.pyplot as plt # also to solve import ordering problems in bioconda mulled tests
 import numpy as np
 import tensorflow as tf
 import random as rn
