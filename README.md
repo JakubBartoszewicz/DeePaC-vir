@@ -19,6 +19,9 @@ See also the main repo here: <https://gitlab.com/rki_bioinformatics/DeePaC>.
 
 ## Installation
 
+We recommend using Bioconda (based on the `conda` package manager) or custom Docker images based on official Tensorflow images.
+Alternatively, a `pip` installation is possible as well.
+
 ### With Bioconda (recommended)
  [![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/deepac/README.html)
  
@@ -45,6 +48,38 @@ conda install tensorflow-gpu deepacvir
 # Basic installation (CPU-only)
 conda install deepacvir
 ```
+
+### With Docker (also recommended)
+
+Requirements: install [Docker](https://docs.docker.com/get-docker/) on your host machine. 
+For GPU support, you have to install the [NVIDIA Docker support](https://github.com/NVIDIA/nvidia-docker) as well.
+See [TF Docker installation guide](https://www.tensorflow.org/install/docker) and the 
+[NVIDIA Docker support installation guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker) 
+for details.
+
+You can then pull the desired image:
+```
+# Basic installation - CPU only
+docker pull jbartoszewicz/deepac:0.13.3
+
+# For GPU support
+docker pull jbartoszewicz/deepac:0.13.3-gpu
+```
+
+And run it:
+```
+# Basic installation - CPU only
+docker run -v "$(pwd):/deepac" --rm jbartoszewicz/deepac:0.13.3 deepac-vir --help
+docker run -v "$(pwd):/deepac" --rm jbartoszewicz/deepac:0.13.3 deepac-vir test -q
+
+# With GPU support
+docker run -v "$(pwd):/deepac" --rm --gpus all jbartoszewicz/deepac:0.13.3-gpu deepac-vir test
+
+# If you want to use the shell insde the container
+docker run -it -v "$(pwd):/deepac" --rm --gpus all jbartoszewicz/deepac:0.13.3-gpu bash
+```
+
+The image ships the main `deepac` package along with `deepac-vir` and `deepac-strain` plugins. See the basic usage guide below for more deepac commands.
 
 
 ### With pip
